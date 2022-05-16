@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Numbers on the Increase </title>
+    <link rel="stylesheet" href="style.css">
+   </head>
+
+<body>
+
+  <button onclick="myFunc()">Click here first</button>
+<script>
+function myFunc() {
+  alert("You are welcome!");
+}
+</script>
+
+  <div class="wrapper">
+    <span class="minus">-</span>
+    <span class="num">00</span>
+    <span class="plus">+</span>
+    <span class="reset">R</span>
+
+  </div>
+
+   <script>
+
+ function wrapper(){
+   document.getElementById("wrapper").reset();
+ } 
+
+
+
+
+    const plus = document.querySelector(".plus"),
+    minus = document.querySelector(".minus"),
+    num = document.querySelector(".num");
+
+    let a = 1;
+
+    plus.addEventListener("click", ()=>{
+      a++;
+      a = (a < 10) ? "0" + a : a;
+      num.innerText = a;
+    });
+
+    minus.addEventListener("click", ()=>{
+      if(a > 1){
+        a--;
+        a = (a < 10) ? "0" + a : a;
+        num.innerText = a;
+      }
+    });
+  </script>
+</body>
+</html>
